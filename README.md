@@ -42,3 +42,13 @@ All spring boot web starter related jar files - As this microservice is develope
 
 json-smart-2.3.jar - For parsing json input and sending json response as output.
 
+
+Implementation:
+----------------
+
+2 Rest API calls are used to construct response in a given format.
+
+1. 'Stock' api is used to fetch information about a symbol but it cannot be used to fetch information from multiple exchanges.        stock_exchange cannot be given as query parameter in this api.
+2. 'stock_search' api accepts stock_exchange as query parameter but it returns only price and currency. Other details like yesterday_close,  market_cap, volume are not returned.
+
+So, first we contsruct response from any of the exchange by sending 'stock' api request and then update price and symbol alone in previous data for other exchanges.
