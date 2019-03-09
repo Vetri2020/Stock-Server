@@ -11,13 +11,13 @@ exchange.
 
 symbol must be a valid stock symbol.
 
- Query Params:
-
+Query Params:
+--------------
 stock_exchange - Optional. This should accept all valid exchange names. eg.
 stock_exchange=NASDAQ,NYSE
 
- Response:
-
+Response:
+----------
 {
 "NASDAQ":{
 "symbol":"AAPL",
@@ -37,7 +37,8 @@ stock_exchange=NASDAQ,NYSE
 Download stock-server.jar from repository and use in your project.
 
 Dependencies:
-
+--------------
 All spring boot web starter related jar files - As this microservice is developed in spring boot.
+
 json-smart-2.3.jar - For parsing json input and sending json response as output.
 
